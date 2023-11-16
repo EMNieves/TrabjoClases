@@ -8,6 +8,14 @@ import { AgregarVentasComponent } from './components/Ventas/agregar-ventas/agreg
 import { MostrarventasComponent } from './components/Ventas/mostrarventas/mostrarventas.component';
 import { ActualizarVentasComponent } from './components/Ventas/actualizar-ventas/actualizar-ventas.component';
 import { EliminarVentasComponent } from './components/Ventas/eliminar-ventas/eliminar-ventas.component';
+import { CrearCochesComponent } from './components/Coche/crear-coches/crear-coches.component';
+import { ActualizarCochesComponent } from './components/Coche/actualizar-coches/actualizar-coches.component';
+import { EliminarCochesComponent } from './components/Coche/eliminar-coches/eliminar-coches.component';
+import { MostrarcochesComponent } from './components/Coche/mostrarcoches/mostrarcoches.component';
+import { MostrarmarcasComponent } from './components/marcas/mostrarmarcas/mostrarmarcas.component';
+import { ActualizarMarcasComponent } from './components/marcas/actualizar-marcas/actualizar-marcas.component';
+import { EliminarMarcasComponent } from './components/marcas/eliminar-marcas/eliminar-marcas.component';
+import { CrearMarcasComponent } from './components/marcas/crear-marcas/crear-marcas.component';
 
 const routes: Routes = [
   { 
@@ -52,7 +60,42 @@ const routes: Routes = [
   },
 
   //-----------------------------------------------------------//
-
+  {
+    path: "Marca",
+    component: MostrarmarcasComponent
+  },
+  {
+    path: "addMarca",
+    component: CrearMarcasComponent
+  },
+  {
+    path: "Marca/edit/:id",
+    component: ActualizarMarcasComponent
+  },
+  {
+    path: "deleteMarca/:id",
+    component: EliminarMarcasComponent
+  },
+  
+  //---------------------------------------------------------//
+  
+  {
+    path: "coches",
+    component: MostrarcochesComponent
+  },
+  {
+    path: "addcoches",
+    component: CrearCochesComponent
+  },
+  {
+    path: "coches/edit/:id",
+    component: ActualizarCochesComponent
+  },
+  {
+    path: "deletecoches/:id",
+    component: EliminarCochesComponent
+  },
+  
   
 
 ];

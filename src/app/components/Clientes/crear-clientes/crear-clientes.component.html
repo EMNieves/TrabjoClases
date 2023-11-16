@@ -1,1 +1,47 @@
-<p>crear-clientes works!</p>
+<form [formGroup]="form" novalidate (ngSubmit)="onSubmit()" class="form-container text-center">
+    <div class="p-grid p-justify-center input-group">
+      
+      <div class="p-col-12 p-sm-6">
+        <div class="p-inputgroup mb-1">
+          <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+          <input type="text" pInputText formControlName="nombreCliente" placeholder="Nombre del Cliente" title="Nombre del Cliente">
+        </div>
+      </div>
+  
+      <div class="p-col-12 p-sm-6">
+        <div class="p-inputgroup mb-1">
+          <span class="p-inputgroup-addon"><i class="pi pi-wallet"></i></span>
+          <input type="text" pInputText formControlName="direccionCliente" placeholder="Dirección del Cliente" title="Dirección del Cliente">
+        </div>
+      </div>
+  
+      <div class="p-col-12 p-sm-6">
+        <div class="p-inputgroup mb-1">
+          <span class="p-inputgroup-addon"><i class="pi pi-phone"></i></span>
+          <input type="text" pInputText formControlName="telefonoCliente" placeholder="Teléfono del Cliente" title="Teléfono del Cliente">
+        </div>
+      </div>
+  
+      <div class="p-col-12 p-sm-6">
+        <div class="p-inputgroup mb-1">
+          <span class="p-inputgroup-addon"><i class="pi pi-bookmark"></i></span>
+          <input type="email" pInputText formControlName="correoCliente" placeholder="Correo Electrónico del Cliente" title="Correo Electrónico del Cliente">
+        </div>
+      </div>
+  
+      <div class="p-col-12 p-sm-6">
+        <div class="p-inputgroup mb-1">
+          <span class="p-inputgroup-addon"><i class="pi pi-comments"></i></span>
+          <input type="password" pInputText formControlName="passwordCliente" placeholder="Contraseña del Cliente" title="Contraseña del Cliente">
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="text-center mt-4">
+      <button pButton pRipple type="submit" icon="pi pi-check" label="Enviar" [disabled]="!form.valid" class="custom-button mr-2"></button>
+      <button pButton pRipple type="button" icon="pi pi-times" label="Cancelar" class="custom-button mr-2" (click)="cancel()"></button>
+    </div>
+    
+  </form>
+  

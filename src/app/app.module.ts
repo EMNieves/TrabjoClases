@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/layout/header/header.component';
@@ -21,6 +21,19 @@ import { EliminarClientesComponent } from './components/Clientes/eliminar-client
 import { AgregarVentasComponent } from './components/Ventas/agregar-ventas/agregar-ventas.component';
 import { ActualizarVentasComponent } from './components/Ventas/actualizar-ventas/actualizar-ventas.component';
 import { EliminarVentasComponent } from './components/Ventas/eliminar-ventas/eliminar-ventas.component';
+import { EliminarCochesComponent } from './components/Coche/eliminar-coches/eliminar-coches.component';
+import { CrearCochesComponent } from './components/Coche/crear-coches/crear-coches.component';
+import { ActualizarCochesComponent } from './components/Coche/actualizar-coches/actualizar-coches.component';
+import { CrearMarcasComponent } from './components/marcas/crear-marcas/crear-marcas.component';
+import { ActualizarMarcasComponent } from './components/marcas/actualizar-marcas/actualizar-marcas.component';
+import { EliminarMarcasComponent } from './components/marcas/eliminar-marcas/eliminar-marcas.component';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import {TableModule} from 'primeng/table';
+import {ToastModule} from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+import {ButtonModule} from 'primeng/button';
+
 
 @NgModule({
   declarations: [
@@ -39,16 +52,34 @@ import { EliminarVentasComponent } from './components/Ventas/eliminar-ventas/eli
     EliminarClientesComponent,
     AgregarVentasComponent,
     ActualizarVentasComponent,
-    EliminarVentasComponent
+    EliminarVentasComponent,
+    EliminarCochesComponent,
+    CrearCochesComponent,
+    ActualizarCochesComponent,
+    CrearMarcasComponent,
+    ActualizarMarcasComponent,
+    EliminarMarcasComponent,
+   
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MenubarModule,
-    PanelMenuModule
+    PanelMenuModule,
+    HttpClientModule,
+    CommonModule,
+    TableModule,
+    ToastModule,
+    ButtonModule,
+    FormsModule,
+    ReactiveFormsModule
+    
   ],
-  providers: [],
+  providers: [
+    MessageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
